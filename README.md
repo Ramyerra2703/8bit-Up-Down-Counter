@@ -53,11 +53,11 @@ $   sudo apt-get install iverilog gtkwave
 To clone the Repository and download the Netlist files for Simulation, enter the following commands in your terminal.
 ```
 $   sudo apt install -y git
-$   git clone https://github.com/Ayyappa1911/iiitb_sysarray_for_3x3_mat_mul.git
-$   cd iiitb_sysarray_for_3x3_mat_mul
-$   iverilog iiitb_sysarray.v iiitb_sysarray_tb.v PE.v delay.v
+$   git clone https://github.com/Ramyerra2703/8bit-Up-Down-Counter.git
+$   cd 8bit-Up-Down-Counter
+$   iverilog iiitb_8bit_up_down_counter.v iiitb_8bit_up_down_counter_tb.v
 $   ./a.out
-$   gtkwave sysarray.vcd
+$   gtkwave waveform.vcd
 ```
 
 ## Functional Characteristics
