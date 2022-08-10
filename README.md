@@ -69,7 +69,7 @@ the below picture represents the waveform when the counter is counting upwards(u
   <img  src="/images/t3.png">
 </p>
 
-the below picture represents the waveform when the down counting starts(up_down=1)
+the below picture represents the waveform when the counter rests and  down counting starts(reset = 0,up_down=1)
 
  <p align="center">
   <img  src="/images/t2.png">
