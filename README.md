@@ -2,12 +2,10 @@
 This document is about an 8 bit Up-Down Counter which is implemented in Verilog HDL. This counter designed for use in the development of applications that need a digital signal of 8 bit
 
 
-## Introduction
-
 
 
 <p align="center">
-  <img  src="/Images/sysArray.png">
+  <img  src="/images/p2.png">
 </p>
 
 
@@ -17,7 +15,7 @@ This document is about an 8 bit Up-Down Counter which is implemented in Verilog 
  The circuit contains two 4 digit counters (CD 4516), a 14 digit oscillator - counter (CD 4060), LED's to represent the output, transistors and buttons to increase, decrease or reset the output. The frequency of counting can be done with different frequencies. The digital value changes according to the button pressed. 
  
  <p align="center">
-  <img  src="/Images/PE_int.png">
+  <img  src="/images/p3.png">
 </p>
 
 ### Working of 8bit up-down counter
@@ -28,7 +26,7 @@ Here the 4 digit counters combine to give the 8 digit counter by the internal ca
  RESET button sets logic 1 to the RESET input of counters and all the outputs go to 0.
      
  <p align="center">
-  <img  src="/Images/delay_block.png">
+  <img  src="/images/p1.png">
 </p>
 
 
@@ -71,12 +69,14 @@ A = [ [1, 2, 3], [4, 5, 6], [7, 8, 9] ], B = [ [1, 2, 3], [4, 5, 6], [7, 8, 9] ]
 and the output D = [ [30, 36, 42], [66, 81, 96], [102, 126, 150] ]
 
  <p align="center">
-  <img  src="/Images/verilog_int_waveform.png">
+  <img  src="/images/t1.png">
 </p>
 
 All the other characteristics are mentioned under the Heading Systolic Array
 
-
+ <p align="center">
+  <img  src="/images/t2.png">
+</p>
 ## synthesis of verilog code
 
 #### About Yosys
