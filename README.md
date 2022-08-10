@@ -63,16 +63,13 @@ $   gtkwave sysarray.vcd
 ## Functional Characteristics
 
 The image below are the waveforms taken from the above instructions with the inputs 
-
-A = [ [1, 2, 3], [4, 5, 6], [7, 8, 9] ], B = [ [1, 2, 3], [4, 5, 6], [7, 8, 9] ] 
-
-and the output D = [ [30, 36, 42], [66, 81, 96], [102, 126, 150] ]
+the below picture represents the waveform when the counter is counting upwards(up_down=0)
 
  <p align="center">
-  <img  src="/images/t1.png">
+  <img  src="/images/t3.png">
 </p>
 
-All the other characteristics are mentioned under the Heading Systolic Array
+the below picture represents the waveform when the down counting starts(up_down=1)
 
  <p align="center">
   <img  src="/images/t2.png">
