@@ -120,7 +120,7 @@ $   yosys>    show
 - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalghosh@gmail.com
 
 ## References:
-- <a href="http://www.porlidas.gr/UpDnCount/UpDnCountEn.htm></a> 
-- <a href="https://www.asic-world.com/examples/verilog/up_down_counter.html></a> 
-- <a href="https://pccomponents.com/datasheets/TI-SN74AS869.PDF></a> 
-- <a href="https://www.fpga4student.com/2017/03/verilog-code-for-counter-with-testbench.html></a> 
+- http://www.porlidas.gr/UpDnCount/UpDnCountEn.htm
+- https://www.asic-world.com/examples/verilog/up_down_counter.html
+- https://pccomponents.com/datasheets/TI-SN74AS869.PDF
+- https://www.fpga4student.com/2017/03/verilog-code-for-counter-with-testbench.html
