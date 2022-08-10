@@ -23,12 +23,9 @@ This document is about an 8 bit Up-Down Counter which is implemented in Verilog 
 ### Working of 8bit up-down counter
 
 Here the 4 digit counters combine to give the 8 digit counter by the internal carry(connecting "Carry Out" of the first counter (IC2) to "Clock In" of the second (IC3). The "Clock In" of the first counter (IC2) is connected to one of the outputs of the oscillator - counter (IC1)).  The mode of counting (UP or DOWN) is specified by the status of CL, U/D and RESET inputs. The signals to these inputs are connected to both counters. Table I shows the combination of these signals demand for each function, if there is a clock pulse presented
-
-   Clock signal (CL) initiates the counting  which comes from the first transistor . This starts the up counting when the button UP is pressed
-
-     The state of U/D signal determines the direction of counting. U/D signal comes from the second transistor. When the button DOWN pressed the transistor sets logic 0 to its output, and activates DOWN counting.
-
-     RESET button sets logic 1 to the RESET input of counters and all the outputs go to 0.\\
+ Clock signal (CL) initiates the counting  which comes from the first transistor . This starts the up counting when the button UP is pressed
+ The state of U/D signal determines the direction of counting. U/D signal comes from the second transistor. When the button DOWN pressed the transistor sets logic 0 to its output, and activates DOWN counting.
+ RESET button sets logic 1 to the RESET input of counters and all the outputs go to 0.
      
  <p align="center">
   <img  src="/Images/delay_block.png">
@@ -36,8 +33,7 @@ Here the 4 digit counters combine to give the 8 digit counter by the internal ca
 
 
 ## Applications
-
-     This counter is used in development of  applications such as ecoders, DAC or digital inputs to microcontrollers. These synchronous, 8-bit up/down
+This counter is used in development of  applications such as ecoders, DAC or digital inputs to microcontrollers. These synchronous, 8-bit up/down
 counters feature internal-carry look-ahead circuitry for cascading in high-speed counting applications.These counters are fully programmable; they may be preset to any number between 0 and 255.
 
 ## About iverilog 
@@ -126,8 +122,6 @@ $   yosys>    show
 - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalghosh@gmail.com
 
 ## References:
-
-- <a href="http://www.porlidas.gr/UpDnCount/UpDnCountEn.htm"></a> 
-- <a href="https://www.asic-world.com/examples/verilog/up_down_counter.html"></a> 
-
+- <a href="http://www.porlidas.gr/UpDnCount/UpDnCountEn.htm></a> 
+- <a href="https://www.asic-world.com/examples/verilog/up_down_counter.html></a> 
 - <a href="https://pccomponents.com/datasheets/TI-SN74AS869.PDF></a> 
