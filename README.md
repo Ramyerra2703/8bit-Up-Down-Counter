@@ -74,7 +74,8 @@ the below picture represents the waveform when the counter rests and  down count
  <p align="center">
   <img  src="/images/t2.png">
 </p>
-## synthesis of verilog code
+
+### synthesis of verilog code
 
 #### About Yosys
 Yosys is a framework for Verilog RTL synthesis. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains.
@@ -122,3 +123,4 @@ $   yosys>    show
 - <a href="http://www.porlidas.gr/UpDnCount/UpDnCountEn.htm></a> 
 - <a href="https://www.asic-world.com/examples/verilog/up_down_counter.html></a> 
 - <a href="https://pccomponents.com/datasheets/TI-SN74AS869.PDF></a> 
+- <a href="https://www.fpga4student.com/2017/03/verilog-code-for-counter-with-testbench.html></a> 
