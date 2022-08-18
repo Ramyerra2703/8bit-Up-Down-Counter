@@ -110,7 +110,16 @@ after running the commands we get the following output
   <img  src="/images/ss2.png">
 </p>
 
+## Gate level Simulation waveforms
 
+ <p align="center">
+  <img  src="/images/gls1.png">
+</p>
+
+ <p align="center">
+  <img  src="/images/gls2.png">
+</p>
+ 
 ## Contributors 
 
 - **Ram Yerra** 
