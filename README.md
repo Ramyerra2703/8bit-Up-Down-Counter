@@ -75,7 +75,7 @@ the below picture represents the waveform when the counter rests and  down count
   <img  src="/images/t2.png">
 </p>
 
-### synthesis of verilog code
+##Synthesis of verilog code
 
 #### About Yosys
 Yosys is a framework for Verilog RTL synthesis. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains.
@@ -86,21 +86,28 @@ To install yosys follow the instructions in  this github repository
 
 https://github.com/YosysHQ/yosys
 
+###commands to run synthesis in yosys
+first create an yosys script yosys_run.sh and paste the following commands- 
 
-#### to synthesize
-```
-$   yosys
-$   yosys>    script yosys_run.sh
-```
+read_verilog iiitb_8bit_up_down_counter.v
+synth -top up_down_counter
+dfflibmap -liberty /home/ram/Desktop/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty /home/ram/Desktop/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+clean
+flatten
+write_verilog -noattr synth_udc.v
+stat
+show
 
-#### to see diffarent types of cells after synthesys
-```
-$   yosys>    stat
-```
-#### to generate schematics
-```
-$   yosys>    show
-```
+
+after running the commands we get the following output
+ <p align="center">
+  <img  src="/images/t3.png">
+</p>
+
+ <p align="center">
+  <img  src="/images/t3.png">
+</p>
 
 
 ## Contributors 
