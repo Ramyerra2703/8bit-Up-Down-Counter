@@ -120,6 +120,95 @@ after running the commands we get the following output
   <img  src="/images/gls2.png">
 </p>
  
+## Layout
+### Preperation
+this layout is generated using the openlane. To run the custom run the following commands
+
+$ cd designs
+
+$ mkdir iiitb_8bitudc
+
+$ cd iiitb_8bitudc
+
+$ mkdir src
+
+$ touch config.json
+
+$ cd src
+
+$ touch iiitb_8bitudc.v
+
+the iiitb_8bitudc.v should contain the verilog rtl code u have used to generate the post synthesis simulation.
+
+opy sky130_fd_sc_hd__fast.lib, sky130_fd_sc_hd__slow.lib, sky130_fd_sc_hd__typical.lib and sky130_vsdinv.lef files to src folder in your design. 
+
+The contents of the config.json are as follows. this can be modified specifically for your design as and when required. 
+
+{
+    "DESIGN_NAME": "iiitb_8bitudc",
+    "VERILOG_FILES": "dir::src/iiitb_8bitudc.v",
+    "CLOCK_PORT": "clkin",
+    "CLOCK_NET": "clkin",
+    "GLB_RESIZER_TIMING_OPTIMIZATIONS": true,
+    "CLOCK_PERIOD": 10,
+    "PL_TARGET_DENSITY": 0.7,
+    "FP_SIZING" : "relative",
+    "pdk::sky130*": {
+        "FP_CORE_UTIL": 30,
+        "scl::sky130_fd_sc_hd": {
+            "FP_CORE_UTIL": 20
+        }
+    },
+    
+    "LIB_SYNTH": "dir::src/sky130_fd_sc_hd__typical.lib",
+    "LIB_FASTEST": "dir::src/sky130_fd_sc_hd__fast.lib",
+    "LIB_SLOWEST": "dir::src/sky130_fd_sc_hd__slow.lib",
+    "LIB_TYPICAL": "dir::src/sky130_fd_sc_hd__typical.lib",  
+    "TEST_EXTERNAL_GLOB": "dir::../iiitb_8bitudc/src/*"
+
+
+}
+
+make the followinf changes and then navigate to the OpenLane folder in the terminal and write the following commands
+
+$ sudo make mount
+
+$ ./flow.tcl -interactive
+
+% package require openlane 0.9
+
+% prep -design iiitb_freqdiv
+
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+
+## Synthesis
+
+% run_synthesis
+
+## Floorplan
+
+% run_floorplan
+
+## Floorplan Reports
+
+## Placement
+
+% run_placement
+
+##Placement Reports
+
+magic -T/home/ram/Desktop/asic/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_8bitudc.def &
+
+
+## Clock Tree Synthesis
+
+% run_cts
+
+##Routing
+
+% run_routing
+
 ## Contributors 
 
 - **Ram Yerra** 
