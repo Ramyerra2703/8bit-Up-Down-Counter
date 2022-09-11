@@ -144,6 +144,7 @@ opy sky130_fd_sc_hd__fast.lib, sky130_fd_sc_hd__slow.lib, sky130_fd_sc_hd__typic
 
 The contents of the config.json are as follows. this can be modified specifically for your design as and when required. 
 
+
 {
     "DESIGN_NAME": "iiitb_8bitudc",
     "VERILOG_FILES": "dir::src/iiitb_8bitudc.v",
@@ -169,11 +170,15 @@ The contents of the config.json are as follows. this can be modified specificall
 
 }
 
+
 make the followinf changes and then navigate to the OpenLane folder in the terminal and write the following commands
 
 $ sudo make mount
 
+after opening the Openlane container give the following command
+
 $ ./flow.tcl -interactive
+
 
 % package require openlane 0.9
 
@@ -192,14 +197,50 @@ add_lefs -src $lefs
 
 ## Floorplan Reports
 
+Die Area
+ <p align="center">
+  <img  src="/images/gls2.png">
+</p>
+
+Core Area
+ <p align="center">
+  <img  src="/images/gls2.png">
+</p>
+
+to open floorplan give the following command
+
+magic -T/home/ram/Desktop/asic/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_8bitudc.def &
+
+ <p align="center">
+  <img  src="/images/gls2.png">
+</p>
+
+Floorplan View
+ <p align="center">
+  <img  src="/images/gls2.png">
+</p>
+
 ## Placement
 
 % run_placement
 
-##Placement Reports
+## Placement Reports
+
+To view placement view give the following command
 
 magic -T/home/ram/Desktop/asic/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_8bitudc.def &
 
+Placement View
+
+ <p align="center">
+  <img  src="/images/gls2.png">
+</p>
+
+sky130_vsdinv in placement view
+
+ <p align="center">
+  <img  src="/images/gls2.png">
+</p>
 
 ## Clock Tree Synthesis
 
@@ -208,6 +249,22 @@ magic -T/home/ram/Desktop/asic/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tec
 ##Routing
 
 % run_routing
+
+To view the routing view give the following command
+
+magic -T/home/ram/Desktop/asic/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_8bitudc.def &
+
+Routing view
+
+ <p align="center">
+  <img  src="/images/gls2.png">
+</p>
+
+sky130_vsdinv in routing view :
+
+ <p align="center">
+  <img  src="/images/gls2.png">
+</p>
 
 ## Contributors 
 
