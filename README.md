@@ -124,6 +124,8 @@ after running the commands we get the following output
 ### Preperation
 this layout is generated using the openlane. To run the custom run the following commands
 
+```
+
 $ cd designs
 
 $ mkdir iiitb_8bitudc
@@ -138,12 +140,15 @@ $ cd src
 
 $ touch iiitb_8bitudc.v
 
+```
+
 the iiitb_8bitudc.v should contain the verilog rtl code u have used to generate the post synthesis simulation.
 
 opy sky130_fd_sc_hd__fast.lib, sky130_fd_sc_hd__slow.lib, sky130_fd_sc_hd__typical.lib and sky130_vsdinv.lef files to src folder in your design. 
 
 The contents of the config.json are as follows. this can be modified specifically for your design as and when required. 
 
+```
 
 {
     "DESIGN_NAME": "iiitb_8bitudc",
@@ -170,15 +175,21 @@ The contents of the config.json are as follows. this can be modified specificall
 
 }
 
+```
+
 
 make the followinf changes and then navigate to the OpenLane folder in the terminal and write the following commands
 
+```
+
 $ sudo make mount
+
+```
 
 after opening the Openlane container give the following command
 
+```
 $ ./flow.tcl -interactive
-
 
 % package require openlane 0.9
 
@@ -187,91 +198,95 @@ $ ./flow.tcl -interactive
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 add_lefs -src $lefs
 
+```
 ## Synthesis
-
+```
 % run_synthesis
-
+```
 ## Floorplan
-
+```
 % run_floorplan
-
+```
 ## Floorplan Reports
 
 Die Area
  <p align="center">
-  <img  src="/images/diearea.png">
+  <img  src="/images/diearea.jpeg">
 </p>
 
 Core Area
  <p align="center">
-  <img  src="/images/corearea.png">
+  <img  src="/images/corearea.jpeg">
 </p>
 
 to open floorplan give the following command
 
+```
 magic -T/home/ram/Desktop/asic/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_8bitudc.def &
+```
 
  <p align="center">
-  <img  src="/images/floorplanroute.png">
+  <img  src="/images/floorplanroute.jpeg">
 </p>
 
 Floorplan View
  <p align="center">
-  <img  src="/images/floorplan.png">
+  <img  src="/images/floorplan.jpeg">
 </p>
 
 ## Placement
-
+```
 % run_placement
-
+```
 ## Placement Reports
 
 To view placement view give the following command
-
+```
 magic -T/home/ram/Desktop/asic/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_8bitudc.def &
+```
 
  <p align="center">
-  <img  src="/images/placementroute.png">
+  <img  src="/images/placementroute.jpeg">
 </p>
 
 Placement View
 
  <p align="center">
-  <img  src="/images/placement.png">
+  <img  src="/images/placement.jpeg">
 </p>
 
 sky130_vsdinv in placement view
 
  <p align="center">
-  <img  src="/images/placementvsdinv.png">
+  <img  src="/images/placementvsdinv.jpeg">
 </p>
 
 ## Clock Tree Synthesis
-
+```
 % run_cts
-
-##Routing
-
+```
+## Routing
+```
 % run_routing
-
+```
 To view the routing view give the following command
-
+```
 magic -T/home/ram/Desktop/asic/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_8bitudc.def &
-
+```
  <p align="center">
-  <img  src="/images/routingroute.png">
+  <img  src="/images/routingroute.jpeg">
 </p>
 
 Routing view
 
  <p align="center">
-  <img  src="/images/routing.png">
+  <img  src="/images/routing.jpeg">
 </p>
 
 sky130_vsdinv in routing view :
 
  <p align="center">
-  <img  src="/images/routingvsdinv.png">
+  <img  src="/images/routingvsdinv.jpeg">
 </p>
 
 ## Contributors 
