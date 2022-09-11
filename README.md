@@ -199,12 +199,12 @@ add_lefs -src $lefs
 
 Die Area
  <p align="center">
-  <img  src="/images/gls2.png">
+  <img  src="/images/diearea.png">
 </p>
 
 Core Area
  <p align="center">
-  <img  src="/images/gls2.png">
+  <img  src="/images/corearea.png">
 </p>
 
 to open floorplan give the following command
@@ -212,12 +212,12 @@ to open floorplan give the following command
 magic -T/home/ram/Desktop/asic/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_8bitudc.def &
 
  <p align="center">
-  <img  src="/images/gls2.png">
+  <img  src="/images/floorplanroute.png">
 </p>
 
 Floorplan View
  <p align="center">
-  <img  src="/images/gls2.png">
+  <img  src="/images/floorplan.png">
 </p>
 
 ## Placement
@@ -230,16 +230,20 @@ To view placement view give the following command
 
 magic -T/home/ram/Desktop/asic/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_8bitudc.def &
 
+ <p align="center">
+  <img  src="/images/placementroute.png">
+</p>
+
 Placement View
 
  <p align="center">
-  <img  src="/images/gls2.png">
+  <img  src="/images/placement.png">
 </p>
 
 sky130_vsdinv in placement view
 
  <p align="center">
-  <img  src="/images/gls2.png">
+  <img  src="/images/placementvsdinv.png">
 </p>
 
 ## Clock Tree Synthesis
@@ -254,16 +258,20 @@ To view the routing view give the following command
 
 magic -T/home/ram/Desktop/asic/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_8bitudc.def &
 
+ <p align="center">
+  <img  src="/images/routingroute.png">
+</p>
+
 Routing view
 
  <p align="center">
-  <img  src="/images/gls2.png">
+  <img  src="/images/routing.png">
 </p>
 
 sky130_vsdinv in routing view :
 
  <p align="center">
-  <img  src="/images/gls2.png">
+  <img  src="/images/routingvsdinv.png">
 </p>
 
 ## Contributors 
