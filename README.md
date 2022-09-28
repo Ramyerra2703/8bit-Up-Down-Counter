@@ -203,6 +203,12 @@ add_lefs -src $lefs
 ```
 % run_synthesis
 ```
+## Post Synthesis Statistics
+
+ <p align="center">
+  <img  src="/images/diearea.jpeg">
+</p>
+
 ## Floorplan
 ```
 % run_floorplan
@@ -288,6 +294,77 @@ sky130_vsdinv in routing view :
  <p align="center">
   <img  src="/images/routingvsdinv.jpeg">
 </p>
+## MIDSEM
+
+## Post Synthesis Gate-Count
+
+ <p align="center">
+  <img  src="/images/diearea.jpeg">
+</p>
+
+The post-synthesis gate count for the design is 50 cells. 
+
+## Area Using Box command
+
+ <p align="center">
+  <img  src="/images/diearea.jpeg">
+</p>
+
+The area of the design is 4861.475 micro meter sq. 
+
+## Performance statistics
+to view the performance staistics followw the following commands
+
+```
+sudo make mount
+sta
+
+```
+
+```
+read_liberty -min /home/ram/Desktop/asic/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v56.lib 
+read_liberty -max /home/ram/Desktop/asic/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v56.lib 
+read_verilog /home/ram/Desktop/asic/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/iiitb_8bitudc.v
+link_design iiitb_8bitudc
+read_sdc /home/ram/Desktop/asic/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/iiitb_8bitudc.sdc
+read_spef /home/ram/Desktop/asic/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/iiitb_8bitudc.spef
+create_clock -name clk -period 10 {clk}
+set_propagated_clock clk
+report_checks -from _86_ -to _91_
+```
+The library setup time is 0.13 ns and the data arrival time (delay) is 1.61 ns.
+
+The minimum time period of the clock is setup time + arrival time= 0.13 + 1.61 ns = 1.74 ns
+
+ <p align="center">
+  <img  src="/images/diearea.jpeg">
+</p>
+
+## Flip-flop to Standard cell ratio
+
+ <p align="center">
+  <img  src="/images/diearea.jpeg">
+</p>
+
+Number of flip-flops in the design = 8
+
+Number of cells in the design = 50
+
+Flip-flop to Standard cell ratio = number of flip-flops/number of cells = 8/50 = 0.16 = 16%
+
+## Power Consumed
+
+ <p align="center">
+  <img  src="/images/diearea.jpeg">
+</p>
+
+The total power consumed by the design is 140 micro Watts
+
+    Internal Power = 99.7 micro Watt
+    Switching Power = 40.6 micro Watt
+    Leakage Power = 39.4 nano Watt
+
+
 
 ## Contributors 
 
