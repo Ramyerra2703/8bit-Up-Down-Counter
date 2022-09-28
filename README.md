@@ -206,7 +206,7 @@ add_lefs -src $lefs
 ## Post Synthesis Statistics
 
  <p align="center">
-  <img  src="/images/diearea.jpeg">
+  <img  src="/images/statmid.png">
 </p>
 
 ## Floorplan
@@ -299,7 +299,7 @@ sky130_vsdinv in routing view :
 ## Post Synthesis Gate-Count
 
  <p align="center">
-  <img  src="/images/diearea.jpeg">
+  <img  src="/images/statmid.png">
 </p>
 
 The post-synthesis gate count for the design is 50 cells. 
@@ -307,7 +307,7 @@ The post-synthesis gate count for the design is 50 cells.
 ## Area Using Box command
 
  <p align="center">
-  <img  src="/images/diearea.jpeg">
+  <img  src="/images/areamid.png">
 </p>
 
 The area of the design is 4861.475 micro meter sq. 
@@ -332,21 +332,24 @@ create_clock -name clk -period 10 {clk}
 set_propagated_clock clk
 report_checks -from _86_ -to _91_
 ```
+
+<p align="center">
+  <img  src="/images/performance.png">
+</p>
+
 The library setup time is 0.13 ns and the data arrival time (delay) is 1.61 ns.
 
 The minimum time period of the clock is setup time + arrival time= 0.13 + 1.61 ns = 1.74 ns
 
- <p align="center">
-  <img  src="/images/diearea.jpeg">
-</p>
+ 
 
 ## Flip-flop to Standard cell ratio
 
  <p align="center">
-  <img  src="/images/diearea.jpeg">
+  <img  src="/images/statmid.png">
 </p>
 
-Number of flip-flops in the design = 8
+Number of flip-flops in the design (dfrtp)  = 8
 
 Number of cells in the design = 50
 
@@ -355,14 +358,14 @@ Flip-flop to Standard cell ratio = number of flip-flops/number of cells = 8/50 =
 ## Power Consumed
 
  <p align="center">
-  <img  src="/images/diearea.jpeg">
+  <img  src="/images/powermid.png">
 </p>
 
 The total power consumed by the design is 140 micro Watts
 
     Internal Power = 99.7 micro Watt
     Switching Power = 40.6 micro Watt
-    Leakage Power = 39.4 nano Watt
+    Leakage Power = 0.394 nano Watt
 
 
 
