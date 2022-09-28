@@ -343,6 +343,8 @@ The library setup time is 0.13 ns and the data arrival time (delay) is 1.61 ns.
 
 The minimum time period of the clock is setup time + arrival time= 0.13 + 1.61 ns = 1.74 ns
 
+performance achieved is 574.71Mhz
+
  
 
 ## Flip-flop to Standard cell ratio
