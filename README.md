@@ -294,6 +294,8 @@ sky130_vsdinv in routing view :
  <p align="center">
   <img  src="/images/routingvsdinv.jpeg">
 </p>
+
+
 ## MIDSEM
 
 ## Post Synthesis Gate-Count
