@@ -341,7 +341,7 @@ report_checks -from _86_ -to _91_
 
 The library setup time is 0.13 ns and the data arrival time (delay) is 1.61 ns.
 
-The minimum time period of the clock is setup time + arrival time= 0.13 + 1.61 ns = 1.74 ns
+The minimum slack of the design for clock period of 10 ns is 8.29 ns. Therefore the maximum clock frequency of the design is 1/(10-8.29)=584.79 MHz.
 
 performance achieved is 574.71Mhz
 
