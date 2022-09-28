@@ -348,7 +348,7 @@ The minimum time period of the clock is setup time + arrival time= 0.13 + 1.61 n
 ## Flip-flop to Standard cell ratio
 
  <p align="center">
-  <img  src="/images/statmid.png">
+  <img  src="/images/stat1mid.png">
 </p>
 
 Number of flip-flops in the design (dfrtp)  = 8
